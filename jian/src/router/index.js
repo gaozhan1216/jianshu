@@ -62,6 +62,28 @@ export default new Router({
       path: '/write',
       component: resolve => require(['../components/page/Write.vue'], resolve),
       meta: {title: '写文章'}
+    },
+    {
+      path:'login',
+      component:resolve => require(['../components/page/Login.vue'],resolve),
+      meta:{title:'登陆'},
+      children:[
+        {
+          path:'/',
+          component:resolve =>require(['../components/page/Sign-in.vue'],resolve),
+          meta:{title:'登陆'}
+        },
+        {
+          path:'/sign_in',
+          component:resolve =>require(['../components/page/Sign-in.vue'],resolve),
+          meta:{title:'登陆'}
+        },
+        {
+          path:'/sign_up',
+          component:resolve =>require(['../components/page/Sign-up.vue'],resolve),
+          meta:{title:'注册'}
+        }
+      ]
     }
   ]
 })
