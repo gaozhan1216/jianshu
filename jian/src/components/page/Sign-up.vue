@@ -1,5 +1,8 @@
 <template>
-  <h2>注册</h2>
+  <div>
+    <h2>注册</h2>
+  </div>
+
 </template>
 
 <script>

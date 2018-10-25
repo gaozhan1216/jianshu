@@ -11,14 +11,17 @@
 
 <script>
   import vHead from './Header.vue';
+
   export default {
     name: "Home",
     components: {
       vHead
-    },
+    }
   }
 </script>
 
 <style scoped>
-
+  .container {
+    width: 80%;
+  }
 </style>

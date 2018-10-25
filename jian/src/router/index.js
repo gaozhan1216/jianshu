@@ -9,14 +9,15 @@ export default new Router({
     {
       //首页组件
       path: '/',
-      redirect: '/index',
+      redirect: 'index',
       component: resolve => require(['../components/common/Home.vue'], resolve),
       meta: {title: '首页'},
       children: [
         {
+          //主页组件
           path: '/index',
           component: resolve => require(['../components/page/Index.vue'], resolve),
-          meta: {title: '发现'}
+          meta: {title: '主页'}
         },
         {
           //关注组件
@@ -37,22 +38,34 @@ export default new Router({
           meta: {title: '所有用户'}
         },
         {
+          //所有专题组件
+          path: '/collections',
+          component: resolve => require(['../components/page/Collections.vue'], resolve),
+          meta: {title: '所有专题'}
+        },
+        {
+          //专题详情
+          path: '/c/:id',
+          component: resolve => require(['../components/page/Collection.vue'], resolve),
+          meta: {title: '专题详情'}
+        },
+        {
           // 个人中心组件
-          path: '/u',
+          path: '/u/:id',
           component: resolve => require(['../components/page/User.vue'], resolve),
           meta: {title: '个人中心'}
         },
         {
-          //所有专题组件
-          path:'/collections',
-          component:resolve => require(['../components/page/Collections.vue'],resolve),
-          meta:{title:'所有专题'}
+          // 文章详情组件
+          path: '/p/:id',
+          component: resolve => require(['../components/page/Article.vue'], resolve),
+          meta: {title: '文章详情'}
         },
         {
-          //所有用户
-          path:'/c/:id',
-          component:resolve => require(["../components/common/Collection.vue"],resolve),
-          meta:{title:'所有用户'}
+          // 设置组件
+          path: '/setting',
+          component: resolve => require(['../components/page/Setting.vue'], resolve),
+          meta: {title: '设置'}
         }
       ]
     },
@@ -64,26 +77,10 @@ export default new Router({
       meta: {title: '写文章'}
     },
     {
-      path:'login',
-      component:resolve => require(['../components/page/Login.vue'],resolve),
-      meta:{title:'登陆'},
-      children:[
-        {
-          path:'/',
-          component:resolve =>require(['../components/page/Sign-in.vue'],resolve),
-          meta:{title:'登陆'}
-        },
-        {
-          path:'/sign_in',
-          component:resolve =>require(['../components/page/Sign-in.vue'],resolve),
-          meta:{title:'登陆'}
-        },
-        {
-          path:'/sign_up',
-          component:resolve =>require(['../components/page/Sign-up.vue'],resolve),
-          meta:{title:'注册'}
-        }
-      ]
+      // 登录
+      path: '/sign_in',
+      component: resolve => require(['../components/page/SignIn.vue'], resolve),
+      meta: {title: '登录'}
     }
   ]
 })

@@ -1,17 +1,11 @@
 <template>
- <div>
-   <v-collection></v-collection>
- </div>
+  <h2>所有用户</h2>
 </template>
 
 <script>
-  import vCollection from '../common/Collection'
-    export default {
-        name: "Users",
-      components:{
-        vCollection
-      }
-    }
+  export default {
+    name: "Users"
+  }
 </script>
 
 <style scoped>

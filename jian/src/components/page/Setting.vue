@@ -1,12 +1,12 @@
 <template>
     <div>
-      <h2>消息</h2>
+      <h2>设置页面</h2>
     </div>
 </template>
 
 <script>
     export default {
-        name: "Notifications"
+        name: "Setting"
     }
 </script>
 

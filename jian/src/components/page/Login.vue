@@ -1,27 +1,27 @@
 <template>
-  <div class="page">
-    <div class="top">
-      <div class="top_logo">
-        <img src="../../assets/logo.png" alt="">
-      </div>
-    </div>
-    <div class="p_center">
-      <div class="c_div">
-        <div class="c_div_top">
-          <h4>
-            <span class="active"><router-link to="/sign_in">登录</router-link></span>
-            <b>·</b>
-            <span>
-              <router-link to="/sign_up">注册</router-link>
-            </span>
+  <!--<div class="page">-->
+    <!--<div class="top">-->
+      <!--<div class="top_logo">-->
+        <!--<img src="../../assets/logo.png" alt="">-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="p_center">-->
+      <!--<div class="c_div">-->
+        <!--<div class="c_div_top">-->
+          <!--<h4>-->
+            <!--<span class="active"><router-link to="/sign-in">登录</router-link></span>-->
+            <!--<b>·</b>-->
+            <!--<span>-->
+              <!--<router-link to="/sign-up">注册</router-link>-->
+            <!--</span>-->
 
-          </h4>
-        </div>
-        <router-view></router-view>
-      </div>
-    </div>
-  </div>
-
+          <!--</h4>-->
+        <!--</div>-->
+        <!--<router-view></router-view>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<v-sign_in></v-sign_in>
 </template>
 
 <script>
